@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Sederhana</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #cf86c9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-box {
+        border: 2px solid rgb(245, 240, 169);
+        padding: 30px;
+        width: 300px;
+        background: rgb(248, 191, 245);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px;
+        width: 100%;
+        background: rgb(204, 156, 211);
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: rgb(165, 165, 161);
+    }
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Login</h2>
+
+    <label>Username</label>
+    <input type="text" id="username">
+
+    <label>Password</label>
+    <input type="password" id="password">
+
+    <button onclick="login()">LOGIN</button>
+</div>
+
+<script>
+    function login() {
+        // username & password yang benar (bisa kamu ubah)
+        var userBenar = "aninmelo";
+        var passBenar = "210909";
+
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if(username === userBenar && password === passBenar){
+            alert("Login berhasil");
+        } else {
+            alert("Login gagal");
+        }
+    }
+</script>
+
+</body>
+</html>
